@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: darkgrey">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(https://www.nih.gov/sites/default/files/styles/floated_media_breakpoint-medium/public/news-events/research-matters/2009/20091116-bacteria.jpg?itok=Y6vDJW3g&timestamp=1434650077); background-size: 50%;">
+        <h1 style="color: white">Belly Button Biodiversity Dashboard</h1>
+        <p style="color: white"><i>Use the interactive charts badd imelow to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <p>The purpose of this project is to create an HTML based webpage and Plotly to visualize bacterial data and composition from the belly button of volunteer donors. The goal is to identify the top 10 bacterial species in their belly buttons and determine if a candidate species used in the manufacturing of synthetic beef is found in the navel of volunteers. Please use the drop down menu below to select an anonymized voluneer to display their demographic information as well as plotted data of the volunteer's bacterial sample.</i></p>
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Demographic Info</strong></h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="samples.json"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
